@@ -19,11 +19,11 @@ PRODUCT_COMPRESSED_APEX := false
 TW_EXCLUDE_APEX := true
 
 # Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0.vendor
+    android.hardware.keymaster@3.0.vendor
 
 # USB
 PRODUCT_PACKAGES += \
