@@ -5,10 +5,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit the common sdm845 BoardConfig
-include device/xiaomi/sdm845-common/BoardConfigCommon.mk
-#
-
 DEVICE_PATH := device/xiaomi/beryllium
 
 # For building with minimal manifest
