@@ -35,6 +35,9 @@ fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
+ # pull in the common vendorsetup.sh
+ source device/xiaomi/sdm845-common/vendorsetupcommon.sh
+
  # Fox-specific flags
  export OF_QUICK_BACKUP_LIST="/boot;/recovery;"
 

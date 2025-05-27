@@ -7,6 +7,10 @@
 
 # Release name
 PRODUCT_RELEASE_NAME := beryllium
+SDM845_COMMON_PATH := device/xiaomi/sdm845-common
+
+# Inherit from sdm845-common, which ultimately adds the local device.mk (if it exists) to the chain
+$(call inherit-product, $(SDM845_COMMON_PATH)/sdm845.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -18,8 +22,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Inherit some common TWRP stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
+# Import OrangeFox specifics
+$(call inherit-product-if-exists, device/xiaomi/tapas/fox_$(PRODUCT_RELEASE_NAME).mk)
+
 # Inherit from beryllium device
-$(call inherit-product, device/xiaomi/beryllium/device.mk)
+$(call inherit-product, device/xiaomi/$(PRODUCT_RELEASE_NAME)/device.mk)
 
 PRODUCT_DEVICE := beryllium
 PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
