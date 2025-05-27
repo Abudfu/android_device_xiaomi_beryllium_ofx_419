@@ -18,16 +18,26 @@
 # 	Please maintain this if you use this script or any part of it
 #
 
+# Screen settings
+OF_SCREEN_H := 2246
+OF_STATUS_H := 80
+OF_STATUS_INDENT_LEFT := 40
+OF_STATUS_INDENT_RIGHT := 40
+OF_OPTIONS_LIST_NUM := 8
+##export OF_HIDE_NOTCH := 1
+##export OF_CLOCK_POS := 1
+OF_ALLOW_DISABLE_NAVBAR := 0
+
+# other stuff
+OF_HIDE_NOTCH := 1
+OF_CLOCK_POS := 1
+OF_CLASSIC_LEDS_FUNCTION := 1
+#OF_USE_LZMA_COMPRESSION := 1
+OF_USE_GREEN_LED := 0
+
 # OrangeFox settings
 OF_NO_TREBLE_COMPATIBILITY_CHECK := 1
 OF_ENABLE_LPTOOLS := 1
-# OF_USE_GREEN_LED := 1
-# OF_CLASSIC_LEDS_FUNCTION := 1
-
-# Custom pic for maintainers about section info
-# Image should be 32 bit PNG 192 x 192 px - Size of image should be as small as possible 50kb
-# OF_MAINTAINER_AVATAR := /device/samsung/e1s/author.png
-OF_MAINTAINER := ferrpp
 
 # Maximum permissible splash image size (in kilobytes); do *NOT* increase
 # OF_SPLASH_MAX_SIZE := 130
@@ -35,17 +45,57 @@ OF_MAINTAINER := ferrpp
 OF_ADVANCED_SECURITY := 1
 OF_DONT_PATCH_ENCRYPTED_DEVICE := 1
 OF_NO_RELOAD_AFTER_DECRYPTION := 1
- 
-# Screen settings
-OF_SCREEN_H := 2246
-OF_STATUS_H := 80
-OF_STATUS_INDENT_LEFT := 40
-OF_STATUS_INDENT_RIGHT := 40
-##export OF_HIDE_NOTCH := 1
-##export OF_CLOCK_POS := 1
-OF_ALLOW_DISABLE_NAVBAR := 0
- 
 
+# keymaster
+OF_DEFAULT_KEYMASTER_VERSION := 3.0
+
+# dynamic partitions?
+ifeq ($(FOX_USE_DYNAMIC_PARTITIONS),1)
+   # build all the partition tools
+   OF_ENABLE_ALL_PARTITION_TOOLS := 1
+   #
+   OF_QUICK_BACKUP_LIST := /boot;/data;
+   OF_DISABLE_OTA_MENU := 1
+   OF_NO_ADDITIONAL_MIUI_PROPS_CHECK := 1
+   OF_SUPPORT_ALL_BLOCK_OTA_UPDATES :=
+   OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR :=
+else
+   OF_QUICK_BACKUP_LIST := /boot;/data;/system_image;/vendor_image;
+   ifeq ($(FOX_USE_KEYMASTER_4),1)
+       OF_DISABLE_OTA_MENU := 1
+       OF_NO_ADDITIONAL_MIUI_PROPS_CHECK := 1
+       OF_SUPPORT_ALL_BLOCK_OTA_UPDATES :=
+       OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR :=
+   endif
+endif
+#
 
 # use system (ROM) fingerprint where available
 # export OF_USE_SYSTEM_FINGERPRINT := 1
+
+# patch avb20 - some ROM recoveries try to overwrite custom recoveries
+OF_PATCH_AVB20 := 1
+
+# no additional check for MIUI props
+OF_NO_ADDITIONAL_MIUI_PROPS_CHECK := 1
+
+# dispense with the entire OTA menu
+OF_DISABLE_OTA_MENU := 1
+
+# encryption stiff
+OF_KEEP_FORCED_ENCRYPTION := 1
+OF_DONT_PATCH_ENCRYPTED_DEVICE := 1
+
+# don't save historic logs
+OF_DONT_KEEP_LOG_HISTORY := 1
+
+# number of list options before scrollbar creation
+OF_OPTIONS_LIST_NUM := 9
+
+# build all the partition tools
+OF_ENABLE_ALL_PARTITION_TOOLS := 1
+
+# use legacy code for wrong clock issues
+OF_USE_LEGACY_TIME_FIXUP := 1
+
+OF_MAINTAINER := ferrpp
