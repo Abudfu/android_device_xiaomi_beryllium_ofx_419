@@ -9,7 +9,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 # GSI
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 LOCAL_PATH := device/xiaomi/beryllium
 
