@@ -6,7 +6,7 @@
 #
 
 # Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 # GSI
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
