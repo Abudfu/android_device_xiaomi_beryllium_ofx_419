@@ -39,7 +39,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
  export OF_QUICK_BACKUP_LIST="/boot;/recovery;"
 
  # OrangeFox Addons
- export FOX_ENABLE_APP_MANAGER=1
+ export FOX_ENABLE_APP_MANAGER=0 #prev 0
+ export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK=1
 
  # Binaries & Tools
  export FOX_USE_BASH_SHELL=1
@@ -48,6 +49,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
  export FOX_USE_TAR_BINARY=1
  export FOX_USE_SED_BINARY=1
  export FOX_USE_XZ_UTILS=1
+ export FOX_USE_BUSYBOX_BINARY=1
+ export FOX_REPLACE_TOOLBOX_GETPROP=1
  ##export FOX_REPLACE_BUSYBOX_PS=1
 
  # Version & Variant
