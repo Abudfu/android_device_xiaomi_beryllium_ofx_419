@@ -52,7 +52,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
  # Version & Variant
  export FOX_MAINTAINER_PATCH_VERSION="12"
- export FOX_VARIANT="A15"
+ export FOX_VARIANT="FBE"
  export FOX_BUILD_TYPE="alpha"
 
  # Other..
