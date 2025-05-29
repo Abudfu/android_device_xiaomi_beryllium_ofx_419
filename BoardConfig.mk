@@ -101,7 +101,6 @@ TARGET_RECOVERY_DEVICE_MODULES += libion libandroidicu vendor.display.config@1.0
     ashmemd_aidl_interface-cpp \
     libashmemd_client \
     libcap \
-    libicui18n \
     libion \
     libicuuc \
     libpcrecpp \
@@ -119,7 +118,6 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libcap.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libicui18n.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpcrecpp.so \
