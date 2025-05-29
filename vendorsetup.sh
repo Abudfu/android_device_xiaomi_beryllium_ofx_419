@@ -43,6 +43,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
  export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK=1
 
  # Binaries & Tools
+ export OF_FORCE_PREBUILT_KERNEL=1
  export FOX_USE_BASH_SHELL=1
  export FOX_ASH_IS_BASH=1
  export FOX_USE_NANO_EDITOR=1
