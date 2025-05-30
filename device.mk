@@ -43,10 +43,6 @@ PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
 
-# Keystore
-#PRODUCT_PACKAGES += \
-#    android.system.keystore2
-
 TARGET_RECOVERY_DEVICE_MODULES += \
     libion \
     libxml2 \
