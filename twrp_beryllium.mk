@@ -28,9 +28,6 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 # Import OrangeFox specifics
 $(call inherit-product-if-exists, $(DEVICE_PATH)/fox_$(PRODUCT_RELEASE_NAME).mk)
 
-# Inherit from beryllium device
-$(call inherit-product, $(DEVICE_PATH)/device.mk)
-
 # Inherit from sdm845-common, which ultimately adds the local device.mk (if it exists) to the chain
 #$(call inherit-product, $(SDM845_COMMON_PATH)/sdm845.mk)
 
