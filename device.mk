@@ -125,6 +125,3 @@ ifneq ($(FOX_VARIANT),)
 	ro.orangefox.variant=$(FOX_VARIANT)
 endif
 #
-
-PRODUCT_COPY_FILES += \
-    $(OUT_DIR)/target/product/beryllium/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
