@@ -117,7 +117,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Inherit from the device-specific device.mk (if it exists) as the last in the chain
-$(call inherit-product-if-exists, $(DEVICE_PATH)/device.mk)
+#$(call inherit-product-if-exists, $(DEVICE_PATH)/device.mk)
 
 # initial prop for variant
 ifneq ($(FOX_VARIANT),)
