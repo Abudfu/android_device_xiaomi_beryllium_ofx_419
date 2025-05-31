@@ -40,10 +40,9 @@ OF_NO_TREBLE_COMPATIBILITY_CHECK := 1
 OF_ENABLE_LPTOOLS := 1
 
 # Maximum permissible splash image size (in kilobytes); do *NOT* increase
-# OF_SPLASH_MAX_SIZE := 130
+OF_SPLASH_MAX_SIZE := 130
 
 OF_ADVANCED_SECURITY := 1
-OF_DONT_PATCH_ENCRYPTED_DEVICE := 1
 OF_NO_RELOAD_AFTER_DECRYPTION := 1
 
 # keymaster
@@ -83,14 +82,14 @@ OF_NO_ADDITIONAL_MIUI_PROPS_CHECK := 1
 OF_DISABLE_OTA_MENU := 1
 
 # encryption stiff
-OF_KEEP_FORCED_ENCRYPTION := 1
-OF_DONT_PATCH_ENCRYPTED_DEVICE := 1
+# OF_KEEP_FORCED_ENCRYPTION := 1
+# OF_DONT_PATCH_ENCRYPTED_DEVICE := 1
 
 # don't save historic logs
 OF_DONT_KEEP_LOG_HISTORY := 1
 
 # number of list options before scrollbar creation
-OF_OPTIONS_LIST_NUM := 9
+# OF_OPTIONS_LIST_NUM := 9
 
 # use legacy code for wrong clock issues
 OF_USE_LEGACY_TIME_FIXUP := 1
