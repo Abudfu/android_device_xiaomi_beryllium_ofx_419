@@ -5,4 +5,12 @@
     "target_path": "device/xiaomi/sdm845-common",
     "branch": "fox_12.1"
   }
+  {
+    "repository": "android_device_qcom_common",
+    "target_path": "device/qcom/common"
+  },
+  {
+    "repository": "android_device_qcom_twrp-common",
+    "target_path": "device/qcom/twrp-common"
+  }
 ]
