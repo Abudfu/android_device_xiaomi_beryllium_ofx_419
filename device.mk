@@ -16,6 +16,10 @@ LOCAL_PATH := device/xiaomi/beryllium
 # OTA
 TARGET_OTA_ASSERT_DEVICE := beryllium
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 # APEX
 PRODUCT_COMPRESSED_APEX := false
 
@@ -39,7 +43,7 @@ PRODUCT_SHIPPING_API_LEVEL := 27
 TW_USE_FSCRYPT_POLICY := 1
 
 # QCOM Decryption
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES_ENG += \
     qcom_decrypt \
     qcom_decrypt_fbe
 
