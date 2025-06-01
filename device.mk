@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 LOCAL_PATH := device/xiaomi/beryllium
 
 # OTA
-TARGET_OTA_ASSERT_DEVICE := beryllium
+# TARGET_OTA_ASSERT_DEVICE := beryllium
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -65,8 +65,8 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/commonsys-intf/display
 
 # OEM otacert
-PRODUCT_EXTRA_RECOVERY_KEYS += \
-    vendor/recovery/security/miui
+#PRODUCT_EXTRA_RECOVERY_KEYS += \
+#    vendor/recovery/security/miui
 
 # dynamic partitions?
 ifeq ($(FOX_USE_DYNAMIC_PARTITIONS),1)
