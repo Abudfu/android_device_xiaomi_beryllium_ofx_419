@@ -26,9 +26,6 @@ TARGET_2ND_CPU_VARIANT := cortex-a75
 TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 TARGET_USES_64_BIT_BINDER := true
 
-# APEX
-#DEXPREOPT_GENERATE_APEX_IMAGE := true #doubt
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm845
 TARGET_NO_BOOTLOADER := true
@@ -98,31 +95,16 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 TARGET_NO_RECOVERY := false
-TARGET_RECOVERY_DEVICE_MODULES += libion libandroidicu vendor.display.config@1.0 vendor.display.config@2.0 libdisplayconfig.qti libhardware_legacy         android.system.suspend@1.0 \
-    android.hidl.base@1.0 \
-    ashmemd \
-    ashmemd_aidl_interface-cpp \
-    libashmemd_client \
+TARGET_RECOVERY_DEVICE_MODULES += 
     libcap \
     libion \
     libicuuc \
-    libpcrecpp \
     libxml2
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libhardware_legacy.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.system.suspend@1.0.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libdisplayconfig.qti.so \
-    $(TARGET_OUT_EXECUTABLES)/ashmemd \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hidl.base@1.0.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libcap.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libpcrecpp.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
 
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
