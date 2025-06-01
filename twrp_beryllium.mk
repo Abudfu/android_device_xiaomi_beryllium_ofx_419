@@ -29,9 +29,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 # Inherit some common TWRP stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-# Import OrangeFox specifics
-$(call inherit-product-if-exists, $(DEVICE_PATH)/fox_$(PRODUCT_RELEASE_NAME).mk)
-
 # Inherit from sdm845-common, which ultimately adds the local device.mk (if it exists) to the chain
 #$(call inherit-product, $(SDM845_COMMON_PATH)/sdm845.mk)
 
@@ -40,8 +37,6 @@ PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := POCO F1
 PRODUCT_MANUFACTURER := Xiaomi
-
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="beryllium-user 10 QKQ1.190828.002 V12.0.3.0.QEJMIXM release-keys"
