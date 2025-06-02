@@ -47,7 +47,6 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_CONFIG := beryllium_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/beryllium
-NEED_KERNEL_MODULE_SYSTEM := true
 
 # Kernel - prebuilt
 TARGET_KERNEL_ARCH := arm64
