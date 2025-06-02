@@ -10,7 +10,3 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),beryllium)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
-
-ifeq ($(TARGET_USES_LOGD), true)
-        TWRP_REQUIRED_MODULES += logd libsysutils libnl init.recovery.logd.rc
-endif
