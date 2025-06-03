@@ -92,12 +92,8 @@ else
 	PRODUCT_PROPERTY_OVERRIDES += ro.fox.keymaster_version=3
 endif
 
-# copy recovery/root/ from the common directory
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(SDM845_COMMON_PATH)/recovery/root/,$(TARGET_COPY_OUT_RECOVERY)/root/)
-
 # Inherit from the device-specific device.mk (if it exists) as the last in the chain
-#$(call inherit-product-if-exists, $(DEVICE_PATH)/device.mk)
+$(call inherit-product-if-exists, $(DEVICE_PATH)/device.mk)
 
 # initial prop for variant
 ifneq ($(FOX_VARIANT),)

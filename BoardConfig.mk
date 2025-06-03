@@ -118,10 +118,6 @@ BOARD_HAS_NO_REAL_SDCARD := true
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
 
-# Properties
-#TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-#TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-
 # Android Verified Boot
 BOARD_AVB_ENABLE := false
 BOARD_BUILD_DISABLED_VBMETAIMAGE := true
