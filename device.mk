@@ -49,11 +49,6 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     libxml2 \
     libicuuc
 
-RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so
-
 # for Android 11+ manifests
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/commonsys-intf/display
