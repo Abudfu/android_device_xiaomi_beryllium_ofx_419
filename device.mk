@@ -38,11 +38,6 @@ PRODUCT_PACKAGES_ENG += \
     qcom_decrypt \
     qcom_decrypt_fbe
 
-TARGET_RECOVERY_DEVICE_MODULES += \
-    libion \
-    libxml2 \
-    libicuuc
-
 # for Android 11+ manifests
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/commonsys-intf/display
@@ -67,15 +62,6 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.boot@1.1-service
 
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.orangefox.dynamic.build=true \
-	ro.fastbootd.available=true \
-	ro.boot.dynamic_partitions=true \
-	ro.boot.dynamic_partitions_retrofit=true
-else
-	PRODUCT_PROPERTY_OVERRIDES += ro.orangefox.dynamic.build=false
-endif
-
 # keymaster-4.0 build
 ifeq ($(FOX_USE_KEYMASTER_4),1)
 	OF_DEFAULT_KEYMASTER_VERSION := 4.0
@@ -85,10 +71,3 @@ else
 	OF_DEFAULT_KEYMASTER_VERSION := 3.0
 	PRODUCT_PROPERTY_OVERRIDES += ro.fox.keymaster_version=3
 endif
-
-# initial prop for variant
-ifneq ($(FOX_VARIANT),)
-  PRODUCT_PROPERTY_OVERRIDES += \
-	ro.orangefox.variant=$(FOX_VARIANT)
-endif
-#

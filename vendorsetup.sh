@@ -35,9 +35,6 @@ fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
- # Fox-specific flags
- export OF_QUICK_BACKUP_LIST="/boot;/recovery;"
-
  # OrangeFox Addons
  export FOX_ENABLE_APP_MANAGER=0 #prev 0
 

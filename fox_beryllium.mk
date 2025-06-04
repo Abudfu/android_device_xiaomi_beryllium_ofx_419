@@ -72,9 +72,6 @@ endif
 # use system (ROM) fingerprint where available
 # export OF_USE_SYSTEM_FINGERPRINT := 1
 
-# patch avb20 - some ROM recoveries try to overwrite custom recoveries
-OF_PATCH_AVB20 := 1
-
 # dispense with the entire OTA menu
 OF_DISABLE_OTA_MENU := 1
 
