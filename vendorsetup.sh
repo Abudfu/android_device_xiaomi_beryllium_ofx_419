@@ -40,7 +40,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
  # OrangeFox Addons
  export FOX_ENABLE_APP_MANAGER=0 #prev 0
- export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK=1
 
  # Binaries & Tools
  export OF_FORCE_PREBUILT_KERNEL=1

@@ -75,9 +75,6 @@ endif
 # patch avb20 - some ROM recoveries try to overwrite custom recoveries
 OF_PATCH_AVB20 := 1
 
-# no additional check for MIUI props
-OF_NO_ADDITIONAL_MIUI_PROPS_CHECK := 1
-
 # dispense with the entire OTA menu
 OF_DISABLE_OTA_MENU := 1
 
