@@ -41,17 +41,3 @@ PRODUCT_PACKAGES_ENG += \
 # for Android 11+ manifests
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/commonsys-intf/display
-
-# OEM otacert
-#PRODUCT_EXTRA_RECOVERY_KEYS += \
-#    vendor/recovery/security/miui
-
-# keymaster-4.0 build
-ifeq ($(FOX_USE_KEYMASTER_4),1)
-	OF_DEFAULT_KEYMASTER_VERSION := 4.0
-	PRODUCT_PROPERTY_OVERRIDES += ro.fox.keymaster_version=4
-else
-# default keymaster=3.0
-	OF_DEFAULT_KEYMASTER_VERSION := 3.0
-	PRODUCT_PROPERTY_OVERRIDES += ro.fox.keymaster_version=3
-endif

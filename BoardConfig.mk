@@ -64,7 +64,7 @@ endif
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 #BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
-#BOARD_SYSTEM_EXTIMAGE_PARTITION_SIZE := 872415232
+BOARD_SYSTEM_EXTIMAGE_PARTITION_SIZE := 872415232
 #BOARD_USERDATAIMAGE_PARTITION_SIZE := 57453555712
 BOARD_VENDORIMAGE_PARTITION_SIZE := 1073741824
 #BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -75,12 +75,12 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 #BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
 #BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 #BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
-#BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Workaround for error copying vendor files to recovery ramdisk
 TARGET_COPY_OUT_VENDOR := vendor
 #TARGET_COPY_OUT_PRODUCT := product
-#TARGET_COPY_OUT_SYSTEM_EXT := system_ext
+TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 #TARGET_COPY_OUT_ODM := odm
 
 # System as root
@@ -98,7 +98,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 TARGET_NO_RECOVERY := false
-TARGET_RECOVERY_DEVICE_MODULES += libion libandroidicu vendor.display.config@1.0 vendor.display.config@2.0 libdisplayconfig.qti libhardware_legacy         android.system.suspend@1.0 \
+TARGET_RECOVERY_DEVICE_MODULES += libandroidicu vendor.display.config@1.0 vendor.display.config@2.0 libdisplayconfig.qti libhardware_legacy         android.system.suspend@1.0 \
     android.hidl.base@1.0 \
     ashmemd \
     ashmemd_aidl_interface-cpp \
@@ -163,7 +163,6 @@ TW_USE_TOOLBOX := true
 TW_EXCLUDE_APEX := true
 TW_INCLUDE_RESETPROP := true
 TW_FRAMERATE := 60
-TW_OVERRIDE_SYSTEM_PROPS := "ro.build.version.security_patch;ro.build.version.release"
 TW_INCLUDE_REPACKTOOLS := true
 TW_FORCE_KEYMASTER_VER := true
 
