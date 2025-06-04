@@ -92,9 +92,6 @@ else
 	PRODUCT_PROPERTY_OVERRIDES += ro.fox.keymaster_version=3
 endif
 
-# Inherit from the device-specific device.mk (if it exists) as the last in the chain
-$(call inherit-product-if-exists, $(DEVICE_PATH)/device.mk)
-
 # initial prop for variant
 ifneq ($(FOX_VARIANT),)
   PRODUCT_PROPERTY_OVERRIDES += \
