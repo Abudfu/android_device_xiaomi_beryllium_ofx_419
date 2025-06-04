@@ -46,22 +46,6 @@ PRODUCT_SOONG_NAMESPACES += \
 #PRODUCT_EXTRA_RECOVERY_KEYS += \
 #    vendor/recovery/security/miui
 
-# dynamic partitions?
-ifeq ($(FOX_USE_DYNAMIC_PARTITIONS),1)
-  PRODUCT_USE_DYNAMIC_PARTITIONS := true
-  PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
-
-TW_INCLUDE_FASTBOOTD := true
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    android.hardware.fastboot@1.0-impl-mock.recovery \
-    fastbootd
-
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl-qti \
-    android.hardware.boot@1.1-impl-qti.recovery \
-    android.hardware.boot@1.1-service
-
 # keymaster-4.0 build
 ifeq ($(FOX_USE_KEYMASTER_4),1)
 	OF_DEFAULT_KEYMASTER_VERSION := 4.0
